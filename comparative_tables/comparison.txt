@@ -1,0 +1,31 @@
+Credit Risk Model Comparison
+
+| Algorithm               | Accuracy | Precision_False | Recall_False | F1-Score_False | Precision_True | Recall_True | F1-Score_True |
+|-------------------------|----------|-----------------|--------------|----------------|----------------|-------------|---------------|
+| MLPClassifier           | 0.782    | 0.0             | 0.0          | 0.0            | 0.78           | 1.0         | 0.88          |
+| RandomForestClassifier  | 1.0      | 1.0             | 1.0          | 1.0            | 1.0            | 1.0         | 1.0           |
+
+Nu a etichetat bine nicio instanta din clasa False
+
+
+Precision_False -- numarul de etichete corect etichetate ca Score_False
+Recall-ul pentru clasa "False". Este proporția de exemple corect etichetate ca "False" din totalul exemplelor reale "False".
+F1-Score pentru clasa "False". Este media armonică a preciziei și recall-ului pentru clasa "False".
+Precizia pentru clasa "True". Este proporția de exemple corect etichetate ca "True" din totalul exemplelor etichetate ca "True".
+Recall-ul pentru clasa "True". Este proporția de exemple corect etichetate ca "True" din totalul exemplelor reale "True".
+F1-Score pentru clasa "True". Este media armonică a preciziei și recall-ului pentru clasa "True"
+
+
+Diabetes Model Comparison
+
+| Algorithm               | Accuracy | Precision_Class_0 | Recall_Class_0 | F1-Score_Class_0 | Precision_Class_1 | Recall_Class_1 | F1-Score_Class_1 | Precision_Class_2 | Recall_Class_2 | F1-Score_Class_2 |
+|-------------------------|----------|--------------------|----------------|------------------|-------------------|----------------|------------------|-------------------|----------------|------------------|
+| MLPClassifier           | 0.723    | 0.72               | 1.0            | 0.84             | 0.0               | 0.0            | 0.0              | 0.0               | 0.0            | 0.0              |
+| RandomForestClassifier  | 0.417    | 0.73               | 0.56           | 0.63             | 0.03              | 0.43           | 0.05             | 0.0               | 0.0            | 0.0              |
+
+
+
+Pentru setul de date Credit Risk, RandomForestClassifier a avut performanțe perfecte în evaluare,
+ceea ce poate sugera un posibil overfitting.
+Pentru setul de date Diabetes, MLPClassifier a avut performanțe mai bune comparativ cu
+RandomForestClassifier, dar ambele modele au avut dificultăți în a clasifica corect clasele 1 și 2.
